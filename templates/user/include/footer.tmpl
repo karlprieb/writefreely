@@ -21,6 +21,7 @@
 	</footer>
 
 	<script type="text/javascript" src="/js/menu.js"></script>
+	{{if .WebFonts}}
 	<script type="text/javascript">
 	try { // Google Fonts
 	  WebFontConfig = {
@@ -36,6 +37,7 @@
 	  })();
 	} catch (e) { /* ¯\_(ツ)_/¯ */ }
 	</script>
+	{{end}}
 {{end}}
 {{define "body-end"}}</body>
 </html>{{end}}

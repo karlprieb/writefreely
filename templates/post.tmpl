@@ -68,6 +68,7 @@
 	{{if .IsPlainText}}<script src="/js/twitter-text.min.js"></script>{{end}}
 	{{end}}
 	<script type="text/javascript">
+	{{if .WebFonts}}
 	try {
 	  WebFontConfig = {
 		custom: { families: [ 'Lora:400,700:latin'{{if eq .Font "sans"}}, 'Open+Sans:400,700:latin'{{end}} ], urls: [ '/css/fonts.css' ] }
@@ -81,6 +82,7 @@
 		s.parentNode.insertBefore(wf, s);
 	  })();
 	} catch (e) { /* ¯\_(ツ)_/¯ */ }
+	{{end}}
 
 	var posts = localStorage.getItem('posts');
 	if (posts != null) {

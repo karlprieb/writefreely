@@ -118,6 +118,7 @@ function unpinPost(e, postID) {
 	http.send(JSON.stringify(params));
 };
 
+	{{if .WebFonts}}
 	try { // Fonts
 	  WebFontConfig = {
 		custom: { families: [ 'Lora:400,700:latin', 'Open+Sans:400,700:latin' ], urls: [ '/css/fonts.css' ] }
@@ -131,6 +132,7 @@ function unpinPost(e, postID) {
 		s.parentNode.insertBefore(wf, s);
 	  })();
 	} catch (e) { /* ¯\_(ツ)_/¯ */ }
+	{{end}}
 	</script>
 
     {{if and .Monetization (not .IsOwner)}}

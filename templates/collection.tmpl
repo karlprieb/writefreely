@@ -234,6 +234,7 @@ function pinPost(e, postID, slug, title) {
 	http.send(JSON.stringify(params));
 };
 
+	{{if .WebFonts}}
 	try {
 	  WebFontConfig = {
 		custom: { families: [ 'Lora:400,700:latin', 'Open+Sans:400,700:latin' ], urls: [ '/css/fonts.css' ] }
@@ -247,5 +248,6 @@ function pinPost(e, postID, slug, title) {
 		s.parentNode.insertBefore(wf, s);
 	  })();
 	} catch (e) {}
+	{{end}}
 	</script>
 </html>{{end}}
